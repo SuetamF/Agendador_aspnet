@@ -12,8 +12,6 @@ namespace TP3_DR2.Models
         [Required]
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public DateTime Nascimento { get; set; }
-
         public DateTime Aniverssario { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -27,7 +28,8 @@ namespace TP3_DR2.Controllers
             {
                 IDPessoa = x.IDPessoa,
                 Nome = x.Nome,
-                Sobrenome = x.Sobrenome
+                Sobrenome = x.Sobrenome,
+                Aniverssario = x.Aniverssario
             });
             return View(pessoasviewmodel);
         }
@@ -58,7 +60,8 @@ namespace TP3_DR2.Controllers
             PessoaViewModel pessoaviewmodel = new PessoaViewModel
             {
                 Nome = pessoa.Nome,
-                Sobrenome = pessoa.Sobrenome
+                Sobrenome = pessoa.Sobrenome,
+                Aniverssario = pessoa.Aniverssario
 
             };
             return View(pessoaviewmodel);
@@ -71,6 +74,7 @@ namespace TP3_DR2.Controllers
                 Pessoa pessoa = new Pessoa();
                 pessoa.Nome = collection["Nome"];
                 pessoa.Sobrenome = collection["Sobrenome"];
+                pessoa.Aniverssario = DateTime.Parse(collection["Aniverssario"]);
 
                 PessoaRepo.Editpessoa(id, pessoa);
                 return RedirectToAction(nameof(Index));
@@ -79,7 +83,7 @@ namespace TP3_DR2.Controllers
             {
                 return View();
             }
-            return View();
+            
         }
         #endregion
 
@@ -92,7 +96,8 @@ namespace TP3_DR2.Controllers
             {
                 IDPessoa = pessoa.IDPessoa,
                 Nome = pessoa.Nome,
-                Sobrenome = pessoa.Sobrenome
+                Sobrenome = pessoa.Sobrenome,
+                Aniverssario = pessoa.Aniverssario
 
             };
             return View(pessoaviewmodel);
@@ -122,7 +127,8 @@ namespace TP3_DR2.Controllers
             {
                 IDPessoa = pessoa.IDPessoa,
                 Nome = pessoa.Nome,
-                Sobrenome = pessoa.Sobrenome
+                Sobrenome = pessoa.Sobrenome,
+                Aniverssario = pessoa.Aniverssario
 
             };
             return View(pessoaviewmodel);
@@ -137,7 +143,9 @@ namespace TP3_DR2.Controllers
             {
                 IDPessoa = x.IDPessoa,
                 Nome = x.Nome,
-                Sobrenome = x.Sobrenome
+                Sobrenome = x.Sobrenome,
+                Aniverssario = x.Aniverssario
+
 
             });
             return View(pessoasviewmodel);

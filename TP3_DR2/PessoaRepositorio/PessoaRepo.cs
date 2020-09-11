@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using TP3_DR2.Models;
 using System.Threading.Tasks;
-using TP3_DR2.ViewModels;
 
 
 namespace TP3_DR2.PessoaRepositorio
 {
     public class PessoaRepo
     {
-        private static int contaId = 2;
+        private static int contaId = 1;
 
         public static int AddId()
         {
@@ -25,7 +24,7 @@ namespace TP3_DR2.PessoaRepositorio
 
         private static List<Pessoa> pessoaList = new List<Pessoa>
         {
-            new Pessoa(){ IDPessoa = 1, Nome = "Mateus", Sobrenome = "Fonseca" }
+            new Pessoa(){ IDPessoa = 0, Nome = "Mateus", Sobrenome = "Fonseca", Aniverssario = new DateTime(1999,11,16) }
         };
 
         public static void AddPessoa(Pessoa pessoa)
@@ -48,6 +47,7 @@ namespace TP3_DR2.PessoaRepositorio
                     resultado.IDPessoa = p.IDPessoa;
                     resultado.Nome = p.Nome;
                     resultado.Sobrenome = p.Sobrenome;
+                    resultado.Aniverssario = p.Aniverssario;
                     break;
                 }
             }
@@ -62,6 +62,7 @@ namespace TP3_DR2.PessoaRepositorio
                 {
                     p.Nome = pessoaUpdate.Nome;
                     p.Sobrenome = pessoaUpdate.Sobrenome;
+                    p.Aniverssario = pessoaUpdate.Aniverssario;
                     break;
                 }
             }
@@ -96,9 +97,11 @@ namespace TP3_DR2.PessoaRepositorio
         public static void Create(Pessoa pessoa)
         {
             
+            
+            pessoa.IDPessoa = GetId();
+            AddPessoa(pessoa);
             AddId();
 
-            AddPessoa(pessoa);
         }
 
     }
