@@ -1,4 +1,4 @@
-﻿@model TP3_DR2.ViewModels.PessoaViewModel
+﻿@model AT_DR2.Models.Pessoa
 
 @{
     ViewData["Title"] = "Details";
@@ -7,15 +7,9 @@
 <h1>Details</h1>
 
 <div>
-    <h4>PessoaViewModel</h4>
+    <h4>Pessoa</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IDPessoa)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IDPessoa)
-        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
@@ -37,6 +31,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Edit" asp-route-id="@Model.IDPessoa">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

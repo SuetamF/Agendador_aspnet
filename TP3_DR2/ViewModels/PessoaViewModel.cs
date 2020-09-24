@@ -13,7 +13,7 @@ namespace TP3_DR2.ViewModels
         [Required]
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public DateTime Aniverssario { get; set; }
+        public DateTime Aniversario { get; set; }
 
         public Pessoa pessoa { get; set; }
     }

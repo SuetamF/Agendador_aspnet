@@ -24,7 +24,7 @@ namespace TP3_DR2.PessoaRepositorio
 
         private static List<Pessoa> pessoaList = new List<Pessoa>
         {
-            new Pessoa(){ IDPessoa = 0, Nome = "Mateus", Sobrenome = "Fonseca", Aniverssario = new DateTime(1999,11,16) }
+            new Pessoa(){ IDPessoa = 0, Nome = "Mateus", Sobrenome = "Fonseca", Aniversario = new DateTime(1999,11,16) }
         };
 
         public static void AddPessoa(Pessoa pessoa)
@@ -47,7 +47,7 @@ namespace TP3_DR2.PessoaRepositorio
                     resultado.IDPessoa = p.IDPessoa;
                     resultado.Nome = p.Nome;
                     resultado.Sobrenome = p.Sobrenome;
-                    resultado.Aniverssario = p.Aniverssario;
+                    resultado.Aniversario = p.Aniversario;
                     break;
                 }
             }
@@ -62,7 +62,7 @@ namespace TP3_DR2.PessoaRepositorio
                 {
                     p.Nome = pessoaUpdate.Nome;
                     p.Sobrenome = pessoaUpdate.Sobrenome;
-                    p.Aniverssario = pessoaUpdate.Aniverssario;
+                    p.Aniversario = pessoaUpdate.Aniversario;
                     break;
                 }
             }

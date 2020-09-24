@@ -29,7 +29,7 @@ namespace TP3_DR2.Controllers
                 IDPessoa = x.IDPessoa,
                 Nome = x.Nome,
                 Sobrenome = x.Sobrenome,
-                Aniverssario = x.Aniverssario
+                Aniversario = x.Aniversario
             });
             return View(pessoasviewmodel);
         }
@@ -61,7 +61,7 @@ namespace TP3_DR2.Controllers
             {
                 Nome = pessoa.Nome,
                 Sobrenome = pessoa.Sobrenome,
-                Aniverssario = pessoa.Aniverssario
+                Aniversario = pessoa.Aniversario
 
             };
             return View(pessoaviewmodel);
@@ -74,7 +74,7 @@ namespace TP3_DR2.Controllers
                 Pessoa pessoa = new Pessoa();
                 pessoa.Nome = collection["Nome"];
                 pessoa.Sobrenome = collection["Sobrenome"];
-                pessoa.Aniverssario = DateTime.Parse(collection["Aniverssario"]);
+                pessoa.Aniversario = DateTime.Parse(collection["Aniversario"]);
 
                 PessoaRepo.Editpessoa(id, pessoa);
                 return RedirectToAction(nameof(Index));
@@ -97,7 +97,7 @@ namespace TP3_DR2.Controllers
                 IDPessoa = pessoa.IDPessoa,
                 Nome = pessoa.Nome,
                 Sobrenome = pessoa.Sobrenome,
-                Aniverssario = pessoa.Aniverssario
+                Aniversario = pessoa.Aniversario
 
             };
             return View(pessoaviewmodel);
@@ -128,7 +128,7 @@ namespace TP3_DR2.Controllers
                 IDPessoa = pessoa.IDPessoa,
                 Nome = pessoa.Nome,
                 Sobrenome = pessoa.Sobrenome,
-                Aniverssario = pessoa.Aniverssario
+                Aniversario = pessoa.Aniversario
 
             };
             return View(pessoaviewmodel);
@@ -144,7 +144,7 @@ namespace TP3_DR2.Controllers
                 IDPessoa = x.IDPessoa,
                 Nome = x.Nome,
                 Sobrenome = x.Sobrenome,
-                Aniverssario = x.Aniverssario
+                Aniversario = x.Aniversario
 
 
             });
